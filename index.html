@@ -7,53 +7,149 @@
     <title>MercadoLivro</title>
 </head>
 <body>
-    <header>
-        <h1>Mercado Livro</h1>
-        <img src="src/assets/LivroAberto.webp" alt="Livro aberto" class="Logo">
-        <input type="text" placeholder="Pesquisar...">
-        <ul>
-            <li><a href="#">Destaques</a></li>
-            <li><a href="#">Crie Uma Conta</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-        </ul>  
 
-        <button class="btn-tema">
-            <img src="src/assets/ModoEscuro.png" alt="Tema" class="Tema">
+    <header>
+        <img src="src/assets/LivroAberto.webp"
+             alt="Logo do MercadoLivro" class="Logo">
+
+        <h1 id="titulo-principal">MercadoLivro</h1>
+
+        <input type="text" id="busca"
+               placeholder="Pesquisar livros...">
+
+        <nav>
+            <ul>
+                <li><a href="#cards">Destaques</a></li>
+                <li><a href="#lancamentos">Catálogo</a></li>
+                <li><a href="#perfil">Criar conta</a></li>
+                <li><a href="#perfil">Entrar</a></li>
+            </ul>
+        </nav>
+
+        <button type="button" class="btn-tema">
+            <img src="src/assets/ModoEscuro.png"
+                 alt="Alternar tema" class="Tema">
         </button>
-        <button class="btn-carrinho">
-            <img src="src/assets/CrinhoDeCompras.png" alt="Carrinho de compras" class="CarrinhoDeCompras">
+
+        <button type="button" class="btn-carrinho">
+            <img src="src/assets/CrinhoDeCompras.png"
+                 alt="Carrinho de compras" class="CarrinhoDeCompras">
+            <span>Compras</span>
         </button>
     </header>
 
     <main>
-        <section id="cards">
-            <h2>Destaques</h2>
 
-            <div class="grade-livros">
-                <article class="card-livro">
-                    <img src="src/assets/livro1.jpg" alt="Capa do primeiro livro">
-                    <h3>Livro 1</h3>
-                    <p>Descrição do primeiro livro.</p>
-                    <button type="button">Comprar</button>
-                </article>
-
-                <article class="card-livro">
-                    <img src="src/assets/livro2.jpg" alt="Capa do segundo livro">
-                    <h3>Livro 2</h3>
-                    <p>Descrição do segundo livro.</p>
-                    <button type="button">Comprar</button>
-                </article>
-
-                <article class="card-livro">
-                    <img src="src/assets/livro3.jpg" alt="Capa do terceiro livro">
-                    <h3>Livro 3</h3>
-                    <p>Descrição do terceiro livro.</p>
-                    <button type="button">Comprar</button>
-                </article>
+        <section class="banner">
+            <div>
+                <h2>Conhecimento para o mundo digital!</h2>
+                <p>Explore livros sobre programação, inteligência artificial e tecnologia.</p>
+                <a href="#cards">Ver destaques</a>
             </div>
         </section>
+
+        <section id="perfil">
+            <h2>Personalizar título</h2>
+
+            <label for="nome-perfil">Digite seu nome ou termo:</label>
+            <input type="text" id="nome-perfil"
+                   placeholder="Ex.: Minha Livraria">
+
+            <button type="button" id="btn-titulo">
+                Atualizar título
+            </button>
+        </section>
+
+        <section id="cards">
+            <h2>Os 3 principais destaques</h2>
+
+            <div class="grade-livros">
+
+                <article class="card-livro">
+                    <img src="src/assets/livro1.jpg"
+                         alt="Capa de Código Zero">
+                    <h3>O Universo da Programação</h3>
+                    <p>Explore a lógica de programação e descubra como transformar ideias em soluções por meio do código.</p>
+                    <p class="preco">R$ 39,90</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                    <button type="button" class="btn-mostrar">Mostrar</button>
+                    <button type="button" class="btn-previa">Gerar prévia do livro</button>
+                </article>
+
+                <article class="card-livro">
+                    <img src="src/assets/livro2.jpg"
+                         alt="Capa de Mentes Artificiais">
+                    <h3>Inteligência Artificial</h3>
+                    <p>Conheça os conceitos da inteligência artificial e como os sistemas podem aprender com dados.</p>
+                    <p class="preco">R$ 44,90</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                    <button type="button" class="btn-mostrar">Mostrar</button>
+                    <button type="button" class="btn-previa">Gerar prévia do livro</button>
+                </article>
+
+                <article class="card-livro">
+                    <img src="src/assets/livro3.jpg"
+                         alt="Capa de Além do Código">
+                    <h3>Sistemas Computacionais</h3>
+                    <p>Entenda os sistemas computacionais e a integração entre hardware e software.</p>
+                    <p class="preco">R$ 35,90</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                    <button type="button" class="btn-mostrar">Mostrar</button>
+                    <button type="button" class="btn-previa">Gerar prévia do livro</button>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="lancamentos">
+            <h2>Catálogo de lançamentos</h2>
+
+            <p>Digite o número correspondente à categoria ou ao mês:</p>
+
+            <ul class="lista-catalogo">
+                <li>1 — Programação</li>
+                <li>2 — Inteligência Artificial</li>
+                <li>3 — Sistemas Computacionais</li>
+                <li>4 — Janeiro</li>
+                <li>5 — Fevereiro</li>
+                <li>6 — Março</li>
+                <li>7 — Abril</li>
+                <li>8 — Maio</li>
+                <li>9 — Junho</li>
+            </ul>
+
+            <label for="numero-catalogo">Número:</label>
+            <input type="number" id="numero-catalogo"
+                   min="1" max="9" placeholder="Digite de 1 a 9">
+
+            <button type="button" id="btn-lancamento">
+                Consultar
+            </button>
+
+            <div id="resultado-lancamento"></div>
+        </section>
+
+        <section id="gerenciar">
+            <h2>Gerenciar destaques</h2>
+
+            <label for="nome-livro">Novo título:</label>
+            <input type="text" id="nome-livro"
+                   placeholder="Digite o título">
+
+            <label for="posicao-livro">Posição numérica:</label>
+            <input type="number" id="posicao-livro"
+                   min="1" max="3" placeholder="Digite de 1 a 3">
+
+            <button type="button" id="btn-destaque">
+                Atualizar destaque
+            </button>
+        </section>
+
     </main>
+
+    <footer>
+        <p>&copy; 2026 MercadoLivro. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="./src/js/script.js"></script>
 </body>
